@@ -1,0 +1,56 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+   	<ui:define name="titulo">
+			<title>.:Pagamento:.</title>
+	</ui:define>
+	
+	<ui:define name="conteudoPagina">
+	<br/><br/><br/>
+    	<div align="center">
+    	
+    	<div id="caixa" style="width:70%;">
+    
+			
+				<div id="primeroPasso" style="width:65%;float: left;">	
+				<br/><br/>
+					<h:inputText id="nomeCliente" type="text" placeholder="Nome do Cliente" styleClass="m-wrap"/>
+					<br/><br/>
+					
+					<select id="agendamentosCliente" onchange="preencherValor()" class="m-wrap">
+						<option value="" selected="selected">Agendamentos</option>
+						<option value="1">Agendamento ref.: 10</option>
+						<option value="2">Agendamento ref.: 150</option>
+					</select>
+					<br/>
+					<br/>
+					<div style="text-align: center;" id="detalhePagamento">		
+										
+						<select onchange="parcelaPagamento()" id="tipoPagamento" class="m-wrap">
+							<option value="" selected="selected">Forma de Pagamento	</option>
+							<option value="1">Dinheiro</option>
+							<option value="2">Cartão</option>
+							<option value="3">Cheque</option>
+						</select>
+						<br/>
+						<div id="parcelamento"></div>
+						<br/><br/><br/>
+						<br/>
+					</div>
+				</div>
+				
+			<div style="width:25%;float: left;">
+				<h1 id="LabelValorTotal" >Valor Total</h1>						
+				<h1 id="valorTotal"> - - </h1>
+				<br/><br/><br/>
+				<br/>		
+				<h:commandButton type="reset" value="Pagamento" onclick="pagando()" styleClass="formataBotao"></h:commandButton>
+			</div>		
+		</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

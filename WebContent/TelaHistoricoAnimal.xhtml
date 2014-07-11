@@ -1,0 +1,70 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+   	<ui:define name="titulo">
+			<title>.:Historico Animal:.</title>
+	</ui:define>
+	
+
+	<ui:define name="conteudoPagina">
+	<br/><br/><br/>
+    	<div align="center"> 
+    		 <div id="caixa" align="center" style="width:50%">   	
+	    	<table border="1" style="width: 90%;height: 50%">
+	    	<thead>
+				<tr>
+				<td>
+					<label>Nome do Pet: </label>
+				</td>
+				<td>
+					<h:selectOneMenu styleClass="m-wrap" value="#{controleHistoricoBean.intAnimal}" >
+						<f:selectItem itemLabel=" "></f:selectItem>
+						<f:selectItems value="#{cadastroAgendamentoBean.animais}" var="animais" itemValue="#{animais}" itemLabel="#{animais}" ></f:selectItems>
+					</h:selectOneMenu> 
+				</td>
+				</tr>
+				</thead>
+			</table>
+			</div>	
+			<br/>
+			<br/>
+			<br/>	
+	    	<div id="caixa" align="center" style="width:50%">
+	    		<table border="1" style="width: 90%;height: 50%">
+	    			<thead>
+	    				<tr>
+	    					<th>Dono</th>
+	    					<th>Animal</th>
+	    					<th>Data</th>
+	    					<th>Horario</th>
+	    					<th>Descrição</th>
+	    					<th>Status</th>
+	    				</tr>
+	    			</thead>
+	    			<tbody>
+	    				<tr>
+		   					<td>Marcelo</td>
+		   					<td>Rex</td>
+		   					<td>07/11/2013</td>
+		   					<td>09:00</td>
+		   					<td>Tomar vacina antí raiva</td>
+		   					<td>Pago</td>
+	    				</tr>
+	    				<tr>
+		   					<td>Marcelo</td>
+		   					<td>Rex</td>
+		   					<td>02/11/2013</td>
+		   					<td>16:00</td>
+		   					<td>Tosa </td>
+		   					<td>Pago</td>
+	    				</tr>
+	    			</tbody>
+	    		</table> 	
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

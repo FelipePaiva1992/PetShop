@@ -1,0 +1,188 @@
+.header
+{
+    background-color:#8db2a1; 
+    border: 1px none #000000;
+    height: 130px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 100%;
+    }	
+    
+    .error {
+	color: #e81f1f;
+}
+	
+	.formataBotao
+{
+    font-family: Calibri;
+    font-size: 13px;
+    color: #666666;
+    background-color: #CCCCCC;
+    cursor: auto;
+    width: 80px;
+ height: 25px;
+ 
+}
+.formataInput
+{
+    font-family: Calibri;
+    font-size: 13.5px;
+    color: #808080; /*border-radius: 0 8px 5px 17px;*/ /*  height: 30px;*/
+    border: 1px solid #999999;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+      background-color: #F9F9F9;
+}
+
+.formataHyperlink
+{
+    font-family: calibri;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;		
+}
+
+.formataHyperlinkTexto
+{
+    font-family: calibri;
+    font-size: 23px;
+    color: #EAEAEA;
+    text-decoration: none;		
+}
+
+.formataDiv
+{
+font-family: Century Gothic;
+font-size: 30px;
+color: #33CCCC ;
+text-align:center;
+}
+.formataDivSuperior
+{
+	font-size: 23px;
+	background-color: #8db2a1;
+	color: #EAEAEA;
+	font-family: Calibri;
+	max-width: 25%;
+	text-align: center;
+	max-height: 25%;
+}
+    
+    .formataDivInferior
+    {
+        color: #8db2a1;
+        font-size:24px;
+    font-family: Calibri;
+    /* border: 1px solid #8db2a1;  */
+   /* width: 295px; */
+    /* width: 100%; */
+    max-width: 295px;
+    padding-right: 20px;
+    text-align:center;
+    vertical-align:super;
+     
+        }
+        .formataDivTexto
+{
+    font-family: Century Gothic;
+    font-size: 28px;
+    color: #999999;
+    text-align: center;
+}
+
+.formataFooter
+{
+    font-family: Calibri;
+    font-size: 14px;
+    background-color: #8db2a1;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.formataDivTextoPequeno
+{
+     font-family: Century Gothic;
+    font-size: 24px;
+    color: #999999;
+    text-align: center;
+     font-weight: bold;
+    }
+
+.formataDivAccordion
+{
+     font-family: Century Gothic;
+    font-size: 18px;
+    color: #999999;
+    text-align: center;
+   
+    }
+    
+    .formataTituloAccordion
+{
+    font-weight: bold;
+    font-family: calibri;
+    font-size: 18px;
+}
+
+.formataTextoTabs
+{
+ font-family: Century Gothic;
+    font-size: 28px;
+    color: #999999;
+    text-align: center;
+ 
+    }
+
+.borda
+{
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    }
+    
+.responsiveImage
+{ 
+    max-width: 100%; 
+    max-height: 300px; 
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+        }
+ 
+body {margin: 20px; 
+      padding: 0; 
+      font-family: Verdana; 
+      font-size: 11px;
+       height: 100%;}
+       
+        .formataTitulo
+   {
+   	font-size: 23px;
+	background-color: #8db2a1;
+	color: #EAEAEA;
+	font-family: Calibri;
+	text-align: center;
+   	}
+   		
+			/* Estilo utilizado no exemplo */
+			
+div#caixa {display: inline-block; width: 100%; height: 100%;}
+
+div#caixa p#abas {display: inline-block; width: 100%; height: 100%; margin: 0 10px 0 10px; padding: 0; overflow: hidden; vertical-align: bottom;}
+
+div#caixa p#abas a {display: inline-block; font-size: 14px; font-weight: bold; color: #666; text-decoration: none; padding: 12px 26px 12px 26px; margin: 0 5px 0 0; background-color: #f0f0f0;}
+
+div#caixa p#abas a:hover {background-color: #ffcc00; color: white;}
+
+div#caixa p#abas a.selected {background-color: #999; color: #000;}
+
+div#caixa ul#conteudos {display: inline-block; width: 100%; height: 100%; margin: 0; padding: 0; }
+
+div#caixa ul#conteudos li {display: inline-block; width: 100%; height: 100%; margin-bottom: 10px; margin-top:10px; padding: 0; overflow: auto; border-radius: 8px;-moz-border-radius: 8px; -webkit-border-radius: 8px; }
+

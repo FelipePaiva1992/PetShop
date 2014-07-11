@@ -1,0 +1,370 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Dog, Cat and Friends</title>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+          
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-1.10.3.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
+	
+	<script type="text/javascript" src="js/funcoesLogin.js"></script>
+
+		
+      
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                heightStyle: "content"
+            });
+        });
+	</script>
+	
+ 	<script type="text/javascript">
+	     function slide1() {
+	         document.getElementById('oi').src = "imagem/husky.jpg"
+	         document.getElementById('ot').src = "imagem/sa.jpg"
+	         setTimeout("slide2()", 5000)
+	     }
+	
+	     function slide2() {
+	         document.getElementById('oi').src = "imagem/gato-persa-branco.jpg";
+	         document.getElementById('ot').src = "imagem/hora.jpg"
+	         setTimeout("slide3()", 5000)
+	     }
+	
+	     function slide3() {
+	         document.getElementById('oi').src = "imagem/peixes.jpg";
+	         document.getElementById('ot').src = "imagem/especialidades.jpg"
+	         setTimeout("slide4()", 5000)
+	     }
+	     function slide4() {
+	         document.getElementById('oi').src = "imagem/passaro.jpg";
+	         document.getElementById('ot').src = "imagem/pets.jpg"
+	         setTimeout("slide1()", 5000)
+	     }
+	     function logar(){
+	    	var user = $('#login').val();
+	    	var senha = $('#senha').val();
+	    	loginUsuarios(user,senha);
+	    	
+	     }
+	</script>
+
+	<script>
+		function escondeDiv () {
+		document.getElementById('fotosRandom').style.display="none";
+		}
+		
+		function abreDiv() {
+		    document.getElementById('fotosRandom').style.display = "block";
+		}
+	</script>
+	
+	<style>
+		html,body{
+			font-family: Century Gothic;
+		}
+	</style>
+ 
+</head>
+
+<body onload="slide1()">
+	<div class="header" id="header">				
+		<div style="float:left">
+			<img class="responsiveImage" src="imagem/logo2.png"/>
+		</div>
+		
+		<div style="padding-top:1%; padding-right:20px;float: right;" >
+			<h:form id="form1" name="form1" method="post" action="">
+				<h:messages showDetail="false" showSummary="true" styleClass="error"/>
+				<h:inputText  name="login" id="login"  size="20" placeholder="Usuario" class="formataInput" value="#{controleAcessoBean.user}"/>
+				<h:inputSecret name="senha" id="senha"  size="20" placeholder="Senha" class="formataInput" value="#{controleAcessoBean.senha}"/>
+				<h:commandButton name="login2" id="login2" value="Logar" class="formataBotao" action="#{controleAcessoBean.logar}"/>		
+			</h:form>
+			<div style="margin-right: 17%; float: left; vertical-align:bottom"> 
+			
+			</div>
+			<div style="float:left">
+				<img align="baseline" src="imagem/icone_pata.png" width="14px" height="14px" />
+				<a class="formataHyperlink" href="CadastroPessoaNovo.xhtml">Cadastre-se</a>
+			</div>
+		</div>
+	</div>
+
+    <div id="content" style="width:100%; text-align:center;">
+    	
+    	<!-- Início: Caixa -->
+    	
+    	<div id="caixa" style="width:100%">
+    	
+	    	<!-- Início: Seleção de abas -->
+			
+			<p id="abas"  style="width:100%">
+			    <a onclick="abreDiv()" href="#aba1" class="selected">Home</a>
+				<a onclick="escondeDiv()" href="#aba2">Quem somos?</a>
+				<a onclick="escondeDiv()" href="#aba3">Quais são as especialidades?</a>
+				<a onclick="escondeDiv()" href="#aba4">Como agendar uma consulta?</a>
+                <a onclick="escondeDiv()" href="#aba5">Como chegar?</a>
+				<a onclick="escondeDiv()" href="#aba6">Mural da adoção</a>                
+			</p>
+			
+			<div id="fotosRandom">
+				<img id="oi" width="50%" class="borda" height="50%" align="left"/>
+				<img id="ot" width="50%" class="borda" height="50%" align="left"/>
+			</div>
+			<!-- Fim: Seleção de abas -->
+			
+			<!-- Início: Conteúdo das abas -->
+			
+			<ul id="conteudos" style="width:100%">
+			
+			<li  style="background-color:#8db2a1" id="aba1" >
+				<br/>
+	
+				<div style="width:100%">
+					<div class="formataDivSuperior" style="float:left">
+						<img class="responsiveImage" src="imagem/banner.jpg" />
+						<br/>
+						<b> Quem Somos </b><br/>
+						
+						A Dog, Cat and Friends chega 
+						a São Bernardo do Campo com 
+						um novo conceito em atendimento 
+					    ao cliente, prezando pela agilidade
+					    e transparência do atendimento.
+					    <p id="aba2">
+					   		<a onclick="escondeDiv()" href="#aba2">Leia mais</a>
+			            </p>
+					</div>			
+					<div class="formataDivSuperior" style="float:left">
+					   	<img class="responsiveImage" src="imagem/dog_cadastro.jpg"/>
+						<br/>
+						<b> Cadastro </b><br/>
+						
+						<a href="" class="formataHyperlinkTexto">Cadastre-se aqui para agendar/verificar/remarcar consultas e acompanhar o 
+						tratamento de seu(s) pet(s)! Caso já possua cadastro, digite seu login e senha na área
+						superior do site e acesse sua conta.</a>
+					</div>
+				
+		            <div class="formataDivSuperior" style="float:left">
+						<img class="responsiveImage"  src="imagem/maps_icon.png" />
+						<br/>
+						<b style="text-align:center">Como Chegar </b> <br/>
+						<p id="aba5">
+						<a onclick="escondeDiv()" class="formataHyperlinkTexto" href="#aba5">
+						A Dog, Cat and Friends está localizada na Rua Sacramento, 230, em São Bernardo do Campo. Clique aqui
+						e escontre a melhor rota para chegar até aqui.</a>
+						</p>
+					</div>
+	              
+		            <div class="formataDivSuperior" style="float:left">
+						<img class="responsiveImage" src="imagem/adote.jpg" />
+						<br/>
+						<b> Mural da Adoção </b><br/>
+						
+						A Dog, Cat and Friends possui um projeto 
+			               onde retira cães e gatos da rua para que 
+			               recebam tratamento veterinário e os 
+			               cuidados necessários. Após isso, 
+			               incluímos suas fotos na aba <b>Mural da Adoção</b>
+			               para que possam encontrar um novo lar. 
+					</div>
+	           	</div>
+			</li>
+			<!-- Início: Conteúdo da Aba 1 -->
+			<!--<div data-role="page" id="page2" data-position="inline">-->
+				<li id="aba2">
+			
+				<table align="center"> 
+                <tr>
+                <td>
+                   
+					<img src="imagem/gato.png" />
+					
+                    </td>
+                <td colspan="2" class="formataTextoTabs"> 
+                
+					<h2>Quem somos</h2>					
+					<p align="center">A Dog, Cat and Friends chega a São Bernardo do Campo com um 
+                     novo conceito em atendimento ao cliente,prezando 
+                     pela agilidade e transparência do atendimento.
+					 <br/> Formada por uma equipe de excelentes veterinários, 
+                    recepcionistas, administradores e profissionais de TI,
+                    temos certeza de que seu Pet receberá o melhor 
+                    atendimento e suporte possíveis. 
+					Diversos membros de nossa equipe já trabalharam
+                     juntos anteriormente e se uniram para criar 
+					a Dog, Cat and Friends, pois acreditam que é possível 
+                     oferecer um serviço justo, eficiente e digno para 
+                     todos os Pets, independentemente da situação
+                      financeira de seus donos ou até
+					mesmo se possuem um dono ou não. 
+					Acreditamos que se nossos Pets nos oferecem todo
+                     o amor que conseguem, independente de nossas
+					falhas ou erros, o minímo que podemos fazer em troca 
+                    é tratá-los com atenção e carinho.</p>
+                    </td>
+                    
+                    </tr>
+</table>
+				</li>
+			<!--	</div>-->
+				
+				<!-- Fim: Conteúdo da Aba 1 -->
+				
+				<!-- Início: Conteúdo da Aba 2 -->
+				
+				<li  id="aba3">
+                    <table align="center" >
+                    <tr>
+                    <td>
+                    <img src="imagem/brushing-dog-teeth.png" />
+                    </td>
+                    <td class="formataTextoTabs">
+                      <h4>Quais são as especialidades?</h4>
+                    <p >Temos veterinários especializados em: <br/>
+                   
+                   - Atendimentos gerais <br/>
+                   - Oftalmologia <br/>
+                   - Cirurgias <br/>
+                   - Odontologia <br/>
+
+                    Acesse o sistema com seu login e senha e verifique um 
+                    <br />mini-currículo de todos
+                    os veterinários disponíveis na clínica.
+                    </p>
+                    </td>
+                    </tr>
+                    </table>				
+				</li>
+				
+				<!-- Fim: Conteúdo da Aba 2 -->
+				
+				<!-- Início: Conteúdo da Aba 3 -->
+				
+				<li id="aba4">
+				<div >
+                <table align="center">
+                <tr>
+               
+                <td class="formataTextoTabs">
+                <h4>Como agendar uma consulta?</h4>					
+					<p>Você pode agendar uma consulta de duas formas:<br/>
+                    - Ligando na Dog, Cat and Friends e solicitando um agendamento com o dia,<br/>
+                     horário e veterinário desejados.<br/>
+                    - Acessando o sistema com seu login e senha e escolhendo o dia, horário e 
+                    <br/> veterinário desejados. Será gerado um
+                    protocolo de agendamento que é <br/>
+                    enviado por email, confirmando a consulta.
+                    </p>
+                </td>
+                 <td>
+                <img src="imagem/cachorro-computador1.png" />
+                </td>
+                </tr>
+                
+                </table>
+					
+					</div>
+					
+				</li>
+	
+				<!-- Fim: Conteúdo da Aba 3 -->
+				
+				<!-- Início: Conteúdo da Aba 4 -->
+				
+				<li id="aba5">
+				<div id="map-canvas">
+				</div>
+					 <img src="imagem/mapas.png" />
+					
+				</li>
+	
+
+    <li id="aba6">
+    <table>
+    <tr>
+    <td>
+    <img src="imagem/Amora branca.jpg" />
+    </td>
+    <td>
+   
+   <!-- <div> 
+				<img src="imagem/Amora branca.jpg" />
+				</div>-->
+  <div  style="float:left" id="accordion">
+  <h3 class="formataTituloAccordion">O programa?</h3>
+  <div class="formataDivAccordion">
+    <p>
+     A Dog, Cat and Friends acredita que todo Pet tem direito a um lar e alguém que cuide e brinque com ele. Infelizmente,
+                     essa não é a realidade que vemos em nossas ruas. Todo dia nos deparamos com um pet vivendo abandonado, muitas vezes com frio e fome,
+                     sujeitos a violência e descaso de algumas pessoas. Por isso, a Dog, cat and friends tem como missão
+                     ajudar esses pets.
+                     Enquanto o espaço destinado aos Pets não é aberto em nossa clínica, divulgaremos pets que estão para adoção
+                     em outras instituições. Nesta semana, a escolhida é a Amora Branca, da instituição ABEAC.
+                     Para mais informações sobre a instituição, <a href="http://abeacsp.blogspot.com.br/">clique aqui.</a>
+                     
+           
+ 
+    </p>
+  </div>
+  <h3 class="formataTituloAccordion">Como funciona?</h3>
+  <div class="formataDivAccordion">
+    <p>  
+                     Após a abertura da clínica, toda semana recolheremos um Pet vitima de maus-tratos da rua e o traremos para a clínica. Aqui,
+                     eles receberão comida e todos os tratamentos necessários para que fiquem saudáveis novamente. Quando isso acontecer, publicaremos sua foto e informações
+                     aqui nesta aba para que alguém possa adotá-lo. 
+                     Quem se interessar pelo bichinho, além de levar um novo melhor amigo para casa, vermifugado e castrado, terá também direito
+                     a  consultas e atendimentos na clínica durante toda a vida do bichinho sem qualquer custo adicional.
+                     Enquanto o pet não conseguir um novo dono, ficará num espaço reservado na clínica para abrigar esses bichinhos. Nesse local, terão caminhas, água e refeições
+                     enquanto for necessário, além de um funcionário que os levarão para passear.
+                      Essa parte do site poderá ser acessada por qualquer pessoa, cliente ou não, por isso pedimos que, caso você não possa adotar um novo Pet agora, indique a página
+                     para amigos, parentes e conhecidos que possam se interessar.
+                     </p>
+  </div>
+  <h3 class="formataTituloAccordion">Como ajudar?</h3>
+  <div class="formataDivAccordion">
+    <p> Caso você conheça ou tenha visto um bichinho em situação crítica, envie um email para: muraladocao@dcandfriends.com.br com seu nome, telefone e se possível, 
+                     uma foto do pet. Analisaremos a situação e retornaremos assim que possível. Estaremos aceitando também doações de rações
+                     para nossos Pets diretamente na clínica. 
+                     <b>OBS:</b>Para a segurança da saúde de nossos Pets, aceitaremos somente ração em embalagem lacrada, evitando, assim, a contaminação externa da ração.
+                     </p>
+ 
+  </div>
+  <h3 class="formataTituloAccordion">Quero adotar!</h3>
+  <div class="formataDivAccordion">
+    <p>Caso se interesse por algum bichinho que publicarmos, mande um email para queroadotar@dcandfriends.com.br com seu nome, telefone e nome do Pet
+                     pelo qual se interessou.</p>
+ 
+  </div>
+</div>
+	 </td>
+    </tr>
+    </table>
+				</li>
+				
+				
+				
+			</ul>
+			
+			<!-- Fim: Conteúdo das abas -->
+		
+		</div>
+		
+		<!-- Fim: Caixa -->
+	</div>
+	
+	<div id="footer" class="formataFooter">
+		Dog, Cat and Friends <br/>
+        @Copyright 2013 <br/>
+        Rua Sacramento, 230 - Rudge Ramos - São Bernardo do Campo/SP - (55) 11 4000-1234
+	</div>
+</body>
+</html>

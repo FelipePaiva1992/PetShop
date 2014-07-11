@@ -1,0 +1,46 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+
+
+	
+	<ui:define name="conteudoPagina">
+	<br/><br/><br/>
+    	<div align="center">  
+    		<h:dataTable value="#{controleEstoqueBean.medicamentos}" var="med" styleClass="tabela"   headerClass="cabecalho"   rowClasses="ultimo,primeiro"  >
+    			<h:column>
+    		 		<f:facet name="header" >Cod. Medicamento</f:facet>
+    		 		<h:outputLabel value="#{med.codMedicamento}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Nome</f:facet>
+    		 		<h:outputLabel value="#{med.nmMedicamento}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Posologia</f:facet>
+    		 		<h:outputLabel value="#{med.vlPosologia}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Descricao</f:facet>
+    		 		<h:outputLabel value="#{med.vlDescricao}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Nome Fornecedor</f:facet>
+    		 		<h:outputLabel value="#{med.fornecedor.nmFornecedor}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Quantidade</f:facet>
+    		 		<h:outputLabel value="#{med.nuMedicamento}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Alertas</f:facet>
+    		 		<h:outputLabel value="#{med.nuMedicamento le 5? 'Em Falta' : 'Em Estoque'}"></h:outputLabel>
+    		 	</h:column>
+    		</h:dataTable>
+			</div>
+			
+	</ui:define>
+</ui:composition>

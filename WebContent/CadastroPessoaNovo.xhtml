@@ -1,0 +1,75 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+   	<ui:define name="titulo">
+		<title>.:Cadastro Usuario:.</title>
+	</ui:define>
+	
+		<ui:define name="cabecalho">
+			<h:inputText name="login" id="login"  size="20" placeholder="Usuario" class="formataInput"/>
+			<h:inputSecret name="senha" id="senha"  size="20" placeholder="Senha" class="formataInput"/>
+			<h:commandButton name="login2" id="login2" value="Logar" class="formataBotao"/>
+		</ui:define>
+	
+	<ui:define name="menu">
+		<div id="menu" style="position:absolute;bottom: 2%; left: 1%;width: 16%;height: 76%;text-align: left;overflow: scroll;" class="menuLateral">
+		<br/>
+			<h3>Termos de Uso!</h3>
+			<p style="font-size: small;height: 100%;margin-left: 2px">O Usuário declara e se responsabiliza pela veracidade de todos os dados por ele fornecidos ao Site no momento de seu Cadastro e em qualquer atualização posterior, ficando responsável, portanto, pela sua exatidão e autenticidade.
+
+			É dever do Usuário manter seus dados atualizados para a devida utilização do Site.
+			
+			Somente será permitido um único Cadastro por Usuário, sendo necessário para sua efetivação o preenchimento de todos os campos exigidos no respectivo formulário.
+			
+			No momento do Cadastro, o Usuário deverá escolher um nome de usuário e senha (login), pessoal e intransferível, por meio dos quais ele terá acesso ao Site, bem como um endereço de e-mail válido para contato, comprometendo-se a não informá-los a terceiros, responsabilizando-se exclusiva e pessoalmente pelo seu uso.
+			
+			Ao concluir o Cadastro, o Usuário receberá uma mensagem da Dog, Cat and Friends em seu e-mail cadastrado, visando à validação do mesmo. Bastará que o Usuário clique na URL para validar e ativar seu Cadastro.
+			
+			O Usuário não pode utilizar palavras deselegantes ou ofensivas para criar seu login, bem como a utilização de marcas de terceiros, nomes de entidades e organizações, nomes protegidos por direitos autorais ou que violem quaisquer direitos de terceiros, sob pena de serem cancelados pela Dog, Cat and Friends, ao seu livre e exclusivo critério.
+			</p>
+		</div>
+	</ui:define>	
+	
+	<ui:define name="conteudoPagina">
+	<br/><br/><br/>
+		<label class = "cadastro_cliente_titulo"> Cadastro de Cliente </label>
+		<h:form>
+			<br/> 	
+			<br/>
+			<table>
+				<tr>
+					<td><label>Nome: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.nmCliente}"/></td>
+				</tr>
+				<tr>
+					<td><label>Telefone: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.vlTelefone}"/></td>
+				</tr>
+				<tr>
+					<td><label>Endereco: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.vlEndereco}"/></td>
+				</tr>
+				<tr>
+					<td><label>CPF: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.vlCpfCliente}"/></td>
+				</tr>
+				<tr>
+					<td><label>Login: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.usuario.nmUsuario}" /></td>
+				</tr>
+				<tr>
+					<td><label>Senha: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.usuario.vlSenha}"/></td>
+				</tr>
+			</table>
+			<br/> 	
+			<br/>
+			<h:commandButton value="Salvar" action="#{cadastroClienteBean.salvarPessoa}" styleClass="formataBotao">
+			</h:commandButton>
+			</h:form>
+	</ui:define>
+
+</ui:composition>

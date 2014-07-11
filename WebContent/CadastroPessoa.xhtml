@@ -1,0 +1,51 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+   	<ui:define name="titulo">
+		<title>.:Cadastro Usuario:.</title>
+	</ui:define>	
+	
+
+	<ui:define name="conteudoPagina">
+		<br/><br/><br/>
+		<label class = "cadastro_cliente_titulo"> Cadastro de Cliente </label>
+		<h:form>
+			<br/> 	
+			<br/>
+			<table>
+				<tr>
+					<td><label>Nome: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.nmCliente}"/></td>
+				</tr>
+				<tr>
+					<td><label>Telefone: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.vlTelefone}"/></td>
+				</tr>
+				<tr>
+					<td><label>Endereco: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.vlEndereco}"/></td>
+				</tr>
+				<tr>
+					<td><label>CPF: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.cliente.vlCpfCliente}"/></td>
+				</tr>
+				<tr>
+					<td><label>Login: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.usuario.nmUsuario}" /></td>
+				</tr>
+				<tr>
+					<td><label>Senha: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroClienteBean.usuario.vlSenha}"/></td>
+				</tr>
+			</table>
+			<br/> 	
+			<br/>
+			<h:commandButton value="Salvar" action="#{cadastroClienteBean.salvarPessoa}" styleClass="formataBotao">
+			</h:commandButton>
+			</h:form>
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,46 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	
+   	<ui:define name="titulo">
+			<title>.:Home:.</title>
+	</ui:define>   
+
+
+	<ui:define name="conteudoPagina">
+		<h1 class="h1Theme">Dog, Cat and Friends</h1>
+		<h3 class="h2Theme">Sistema de Controle Administrativo</h3>	
+		<br/>
+		<!-- <div class="slider" >
+            <div class="slider-container">
+                <div class="slider-warpper">
+                    <div class="slide">
+                        <img src="resources/imagens/i01.jpg" alt="jQuery Slider with CSS Transitions"/>
+                    </div>
+                    <div class="slide">
+                        <img src="resources/imagens/i02.jpg" alt="jQuery Slider with CSS Transitions"/>
+                    </div>
+                    <div class="slide">
+                        <img src="resources/imagens/i03.jpg" alt="jQuery Slider with CSS Transitions"/>
+                    </div>
+                    <div class="slide">
+                        <img src="resources/imagens/i04.jpg" alt="jQuery Slider with CSS Transitions"/>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+    <ul class="rslides" id="slider1" style="border: 2px solid white;">
+      <li><img src="resources/imagens/i04.jpg" alt=""/></li>
+      <li><img src="resources/imagens/i03.jpg" alt=""/></li>
+      <li><img src="resources/imagens/i02.jpg" alt=""/></li>
+      <li><img src="resources/imagens/i01.jpg" alt=""/></li>
+    </ul>
+
+        
+	</ui:define>
+	
+</ui:composition>

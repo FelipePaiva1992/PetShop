@@ -1,0 +1,48 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+   	<ui:define name="titulo">
+			<title>.:Agendamentos:.</title>
+	</ui:define>
+
+
+	
+	<ui:define name="conteudoPagina">
+	<br/><br/><br/>
+    	<div align="center"> 
+    		 <div id="caixa" align="center">   	
+    		 
+    		 <h:dataTable value="#{controleAgendamentoBean.agendamentos}" var="agendamentos" styleClass="tabela"   headerClass="cabecalho"   rowClasses="ultimo,primeiro">
+    		 	<h:column>
+    		 		<f:facet name="header">Dono</f:facet>
+    		 		<h:outputLabel value="#{agendamentos.animal.cliente.nmCliente}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Animal</f:facet>
+    		 		<h:outputLabel value="#{agendamentos.animal.nmAnimal}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Data</f:facet>
+    		 		<h:outputLabel value="#{agendamentos.dtData}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Horario</f:facet>
+    		 		<h:outputLabel value="#{agendamentos.vlHhInicio}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Descrição</f:facet>
+    		 		<h:outputLabel value="#{agendamentos.dsInformacoes}"></h:outputLabel>
+    		 	</h:column>
+    		 	<h:column>
+    		 		<f:facet name="header">Status</f:facet>
+    		 		<h:outputLabel value="#{agendamentos.vfPago eq 0 ? 'Em Aberto': 'Pago'}"></h:outputLabel>
+    		 	</h:column>
+    		 </h:dataTable>
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

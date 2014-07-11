@@ -1,0 +1,50 @@
+/* Definição de estilos para toda a tabela*/
+
+.tabela {
+
+	border-spacing: 0px;
+
+	
+}
+
+ 
+
+/* Definição de estilos para linha de cabeçalho da tabela*/
+
+.cabecalho {
+
+   text-align: center;
+
+   font-weight: bold;
+
+   color: black;
+
+   background:  #8db2a1;  
+   
+   border: 1px solid;
+   
+
+}
+
+ 
+
+/* Definição de estilos para coluna */
+
+.primeiro {
+
+   background: white;
+}
+
+ 
+
+/* Definição de estilos para coluna */
+
+.ultimo {
+	
+   background: #E8E8E8;
+
+}
+
+
+
+Leia mais em: Integrando JSF e CSS – Aplicando estilos ao dataTable http://www.devmedia.com.br/integrando-jsf-e-css-aplicando-estilos-ao-datatable/5327#ixzz2l0CFQiuS

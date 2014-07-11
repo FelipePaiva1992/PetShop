@@ -1,0 +1,36 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+   	<ui:define name="titulo">
+		<title>.:Cadastro Fornecedor:.</title>
+	</ui:define>
+	
+
+
+	<ui:define name="conteudoPagina">
+	<br/><br/><br/>
+		<label class = "cadastro_cliente_titulo"> Cadastro do Fornecedor </label>
+		<h:form class = "cadastro_cliente" style="text-align: left;">
+			<br/> 	
+			<br/>
+			<table>
+				<tr>
+					<td><label>Fornecedor: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroFonecedorBean.fornecedor.nmFornecedor}"/></td>
+				</tr>
+				<tr>
+					<td><label>Endereço: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroFonecedorBean.fornecedor.vlEnderecoFornecedor}" /></td>
+				</tr>
+			</table>
+			<br/> 	
+			<br/>
+			<h:commandButton value="Salvar" action="#{cadastroFonecedorBean.salvarFornecedor}" styleClass="formataBotao" >
+			</h:commandButton>
+			</h:form>
+	</ui:define>
+	
+</ui:composition>

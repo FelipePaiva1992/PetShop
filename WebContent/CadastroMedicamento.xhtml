@@ -1,0 +1,52 @@
+<ui:composition template="/HomeTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+
+	
+	<ui:define name="conteudoPagina">
+	<br/><br/><br/>
+    	<div align="center"> 
+    		 <div id="caixa" align="center" style="width:50%">  
+    		 <h:form>
+	    	<table>
+	    	<thead>
+				<tr>
+				<td><label>Fornecedor: </label></td>
+				<td>
+					<h:selectOneMenu styleClass="m-wrap" value="#{cadastroMedicamentosBean.intFornecedor}">
+						<f:selectItems value="#{cadastroMedicamentosBean.fornecedores}" var="forn" itemValue="#{forn}" itemLabel="#{forn}" ></f:selectItems>
+					</h:selectOneMenu>
+				</td>
+				</tr>
+				<tr>
+					<td><label>Nome: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroMedicamentosBean.estoqueMedicamento.nmMedicamento}"/></td>
+				</tr>
+				<tr>
+					<td><label>Posologia: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroMedicamentosBean.estoqueMedicamento.vlPosologia}" /></td>
+				</tr>
+				<tr>
+					<td><label>Quantidade: </label></td>
+					<td><h:inputText size = "50" styleClass="m-wrap" value="#{cadastroMedicamentosBean.estoqueMedicamento.nuMedicamento}" /></td>
+				</tr>
+				<tr>
+					<td><label>Descrição: </label></td>
+					<td><h:inputTextarea size = "50" styleClass="m-wrap" value="#{cadastroMedicamentosBean.estoqueMedicamento.vlDescricao}" /></td>
+				</tr>					
+				</thead>
+			</table>
+			<br/>
+			<br/>
+			<h:commandButton value="Salvar" action="#{cadastroMedicamentosBean.salvarMedicamento}" styleClass="formataBotao" >
+			</h:commandButton>
+			</h:form>
+			</div>	
+			 		    	
+		</div>
+	</ui:define>
+
+</ui:composition>

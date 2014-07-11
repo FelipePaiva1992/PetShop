@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core">
+  <h:head>
+  
+  <ui:insert name="titulo">
+    <title>Template Web</title>
+  </ui:insert>
+    <h:outputStylesheet library="css" name="styleTemplate.css" />
+    <h:outputStylesheet library="css" name="style.css"/>
+    <h:outputScript library="js" name="funcoesPagamento.js"></h:outputScript>
+	<h:outputScript library="js" name="funcoesApresentacao.js"></h:outputScript>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    <script src="resources/js/slider.min.js"></script>
+    <link rel="stylesheet" href="resources/css/style12.css"/>    
+    <link rel="stylesheet" href="resources/css/responsiveslides.css"/>
+  	<script src="resources/js/responsiveslides.min.js"></script>
+  	<link rel="stylesheet" href="resources/css/tabelas.css"/>
+  	
+  	<link href="css/dropdown/dropdown.vertical.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/dropdown/themes/default/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
+        
+        
+  </h:head>
+  <h:body>
+    <h:form id="form">
+      <table width="100%">
+        <tr>
+          <td colspan="2" align="center">
+          <div id="topo" style="position:absolute;top: 2%; right: 1%; left: 1%;width:98%;height: 17%" class="header">
+          <div style="float: left;">
+          	<img src="resources/imagens/logo2.png" width="100%" height="100%" align="middle"/>
+          </div>
+          
+	          <!-- Arrumar alinhamento -->
+	          <div style="position:absolute;right: 0px;top: 10%;right: 0px">
+	          	<h:commandLink  action="index.xhtml?faces-redirect=true" styleClass="links" ><img src="resources/imagens/icon/homeb.png" style="width: 35%"/></h:commandLink>
+	          	
+	          </div>
+	          
+	          
+	          <div style="position:absolute;font-size: x-large;bottom: 10%;right: 2%">
+	            <ui:insert name="cabecalho">
+		            <div id="cabecalhoTemplate">
+					</div>
+	            </ui:insert>
+	           </div>
+            
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="200px" valign="top">
+            <ui:insert name="menu">
+            <div id="menu" style="position:absolute;bottom: 2%; left: 1%;width: 16%;height: 76%;text-align: center;" class="menuLateral">
+	            <br/>
+             	<div id="links" align="left" style="text-align: left;margin-left: 5%">     
+	             	<c:if test="#{controleAcessoBean.tipoUser == 'administrador'}">     	
+		              	<ul id="nav" class="dropdown dropdown-vertical">
+							<li><a href="TelaInicial.xhtml"><img src="resources/imagens/icon/home.png" style="width: 14%"/> Home</a></li>
+							<hr></hr>
+							<li><span class="dir"><img src="resources/imagens/icon/animal.png" style="width: 14%"/>  Cadastro</span>
+								<ul style="background-color: #ccc;border: 1px solid">
+									<li><a href="CadastroFornecedor.xhtml">Fornecedor</a></li>
+									<li><a href="CadastroAnimal.xhtml">Animal</a></li>
+									<li><a href="CadastroPessoa.xhtml">Cliente</a></li>
+									<li><a href="CadastroAgendamento.xhtml">Agendamento</a></li>
+									<li><a href="CadastroMedicamento.xhtml">Medicamento</a></li>
+								</ul>
+							</li>
+							<hr></hr>
+							<li><a href="TelaAgendamentos.xhtml"><img src="resources/imagens/icon/agendamento.png" style="width: 14%"/> Agendamentos</a></li>
+							<!-- <li><a href="TelaHistoricoAnimal.xhtml"><img src="resources/imagens/icon/agendamento.png" style="width: 14%"/> Historico Animal</a></li> -->
+							<li><a href="ControleMedicamento.xhtml"><img src="resources/imagens/icon/agendamento.png" style="width: 14%"/> Estoque</a></li>
+							<li><a href="TelaPagamento.xhtml"><img src="resources/imagens/icon/pagamento.png" style="width: 14%"/> Pagamento</a></li>
+							<li><a href="TelaRelatorios.xhtml"><img src="resources/imagens/icon/relatorio.png" style="width: 14%"/> Relatorios</a></li>
+						</ul>
+					</c:if>
+					<c:if test="#{controleAcessoBean.tipoUser == 'cliente'}">     	
+		              	<ul id="nav" class="dropdown dropdown-vertical">
+							<li><a href="TelaInicial.xhtml"><img src="resources/imagens/icon/home.png" style="width: 14%"/> Home</a></li>
+							<hr></hr>
+							<li><span class="dir"><img src="resources/imagens/icon/animal.png" style="width: 14%"/>  Cadastro</span>
+								<ul style="background-color: #ccc;border: 1px solid">
+									<li><a href="CadastroAnimal.xhtml">Animal</a></li>
+									<li><a href="CadastroPessoa.xhtml">Cliente</a></li>
+									<li><a href="CadastroAgendamento.xhtml">Agendamento</a></li>
+								</ul>
+							</li>
+							<hr></hr>
+							<li><a href="TelaAgendamentos.xhtml"><img src="resources/imagens/icon/agendamento.png" style="width: 14%"/> Agendamentos</a></li>
+							<!-- <li><a href="TelaHistoricoAnimal.xhtml"><img src="resources/imagens/icon/agendamento.png" style="width: 14%"/> Historico Animal</a></li> -->
+						</ul>
+					</c:if>
+              	</div>
+              </div>
+            </ui:insert>
+          </td>
+          <td>
+          <div id="content" style="position:absolute;bottom: 2%; right: 1%;width: 81%;height: 76%;" align="center" class="conteudo">
+          <br/>
+            <ui:insert name="conteudoPagina">
+            	
+              		Conteúdo
+            	
+            </ui:insert>
+            
+            </div>
+          </td>
+        </tr>
+      </table>
+    </h:form>
+    
+     <script type="text/javascript">
+     // Slideshow 1
+     $("#slider1").responsiveSlides({
+       maxwidth: 600,
+       speed: 300
+     });     
+    
+      </script>
+        
+        
+  </h:body>
+</html>

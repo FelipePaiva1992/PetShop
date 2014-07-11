@@ -1,0 +1,216 @@
+.menuLateral,.conteudo{
+background-color: #CBCCCC;
+
+
+	
+}
+
+.header{
+	/* background: rgb(148,204,204); Old browsers
+	background: -moz-linear-gradient(left,  rgba(148,204,204,1) 0%, rgba(255,255,255,1) 100%); FF3.6+
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(148,204,204,1)), color-stop(100%,rgba(255,255,255,1))); Chrome,Safari4+
+	background: -webkit-linear-gradient(left,  rgba(148,204,204,1) 0%,rgba(255,255,255,1) 100%); Chrome10+,Safari5.1+
+	background: -o-linear-gradient(left,  rgba(148,204,204,1) 0%,rgba(255,255,255,1) 100%); Opera 11.10+
+	background: -ms-linear-gradient(left,  rgba(148,204,204,1) 0%,rgba(255,255,255,1) 100%); IE10+
+	background: linear-gradient(to right,  rgba(148,204,204,1) 0%,rgba(255,255,255,1) 100%); W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94cccc', endColorstr='#ffffff',GradientType=1 ); IE6-9 */
+	
+	background-color:#8db2a1; 
+	
+	
+}
+
+
+	.formataBotao
+{
+	font-family: Calibri;
+	font-size: 13px;
+	color: #666666;
+	background-color: #CCCCCC;
+	cursor: auto;
+	width: 80px;
+	height: 25px;
+ 
+}
+.formataInput
+{
+    font-family: Calibri;
+    font-size: 13.5px;
+    color: #808080; /*border-radius: 0 8px 5px 17px;*/ /*  height: 30px;*/
+    border: 1px solid #999999;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+      background-color: #F9F9F9;
+}
+
+.formataHyperlink
+{
+    font-family: calibri;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;		
+}
+
+.formataDiv
+{
+font-family: Century Gothic;
+font-size: 30px;
+color: #33CCCC ;
+text-align:center;
+}
+.formataDivSuperior
+{
+	font-size: 23px;
+	background-color: #8db2a1;
+	color: #EAEAEA;
+	font-family: Calibri;
+	max-width: 260px;
+	text-align: center;
+	
+	/*height: 550px;*/
+	margin-right: 50px;
+}
+    
+    .formataDivInferior
+    {
+        color: #8db2a1;
+        font-size:24px;
+    font-family: Calibri;
+    /* border: 1px solid #8db2a1;  */
+   /* width: 295px; */
+    /* width: 100%; */
+    max-width: 295px;
+    padding-right: 20px;
+    text-align:center;
+    vertical-align:super;
+     
+        }
+        .formataDivTexto
+{
+    font-family: Century Gothic;
+    font-size: 28px;
+    color: #999999;
+    text-align: center;
+}
+
+.formataFooter
+{
+    font-family: Calibri;
+    font-size: 14px;
+    background-color: #8db2a1;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.formataDivTextoPequeno
+{
+     font-family: Century Gothic;
+    font-size: 24px;
+    color: #999999;
+    text-align: center;
+     font-weight: bold;
+    }
+
+.formataDivAccordion
+{
+     font-family: Century Gothic;
+    font-size: 18px;
+    color: #999999;
+    text-align: center;
+   
+    }
+    
+    .formataTituloAccordion
+{
+    font-weight: bold;
+    font-family: calibri;
+    font-size: 18px;
+}
+
+.formataTextoTabs
+{
+ font-family: Century Gothic;
+    font-size: 28px;
+    color: #999999;
+    text-align: center;
+ 
+    }
+
+.borda
+{
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    }
+    
+.responsiveImage
+{ 
+    max-width: 100%; 
+    max-height: 300px; 
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+        }
+
+       
+        .formataTitulo
+   {
+   	font-size: 23px;
+	background-color: #8db2a1;
+	color: #EAEAEA;
+	font-family: Calibri;
+	text-align: center;
+   	}
+   	
+   	html,body{
+   		padding: 0px;
+   		margin: 0 auto;
+   		width: 100%;
+   		height: 100%;
+   		overflow-x: hidden;
+   		overflow-y: hidden;
+   		background-color: white;
+   		font-family :Century Gothic; 
+   	}
+   	
+   	#topo,#menu,#content{
+   		-moz-border-radius: 8px; /* Para Firefox */
+		-webkit-border-radius: 8px; /*Para Safari e Chrome */
+		border-radius: 8px; /* Para Opera 10.5+*/
+		border: 1px solid #000;
+   	}
+   	
+   	.links{
+   		color: black;
+   		text-decoration: none;
+   		font-family:"Times New Roman",Times,serif;
+   		font-size: large;
+   	}
+   	
+   	img{
+   		max-width: auto; 
+   		max-height: 100%; 
+   	}
+   	
+   	.h1Theme{
+	    font-weight: normal;
+	    font-style: normal;
+	    font: 3.8em 'OratorpraOi-TextTwo';
+	    margin: 30px 0;
+	    text-align: center;
+   	}
+   	
+   	.h2Theme{
+	    font-weight: normal;
+	    font-style: normal;
+	    font: 1.8em 'OratorpraOi-TextTwo';
+	    margin: 30px 0;
+	    text-align: center;
+   	}
+   		
+			
